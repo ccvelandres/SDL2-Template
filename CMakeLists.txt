@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.15)
-project(SDL2-Template VERSION 0.1.0)
+get_filename_component(PROJECT_FOLDER_NAME ${CMAKE_CURRENT_LIST_DIR} NAME)
+string(REPLACE " " "_" PROJECT_FOLDER_NAME ${PROJECT_FOLDER_NAME})
+project(${PROJECT_FOLDER_NAME} VERSION 0.1.0)
+message("Project Name: ${PROJECT_NAME}")
 
 find_package(SDL2 REQUIRED)
 find_package(OpenGL REQUIRED)
